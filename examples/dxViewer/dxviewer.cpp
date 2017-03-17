@@ -67,6 +67,7 @@ OpenSubdiv::Osd::D3D11LegacyGregoryPatchTable *g_legacyGregoryPatchTable = NULL;
 #include "../common/d3d11Hud.h"
 #include "../common/d3d11Utils.h"
 #include "../common/d3d11ShaderCache.h"
+#include "../common/stringify.h"
 
 #include <osd/hlslPatchShaderSource.h>
 static const char *shaderSource =
@@ -1548,7 +1549,7 @@ WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmd
     RECT rect = { 0, 0, g_width, g_height };
     AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
 
-    static const char windowTitle[] = "OpenSubdiv dxViewer " OPENSUBDIV_VERSION_STRING;
+    static const char windowTitle[] = "OpenSubdiv dxViewer " STRINGIFY(OPENSUBDIV_VERSION_STRING);
 
     HWND hWnd = CreateWindow(szWindowClass,
                         windowTitle,

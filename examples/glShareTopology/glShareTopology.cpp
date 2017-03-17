@@ -23,6 +23,7 @@
 //
 
 #include "../common/glUtils.h"
+#include "../common/stringify.h"
 
 #include <GLFW/glfw3.h>
 GLFWwindow* g_window=0;
@@ -1180,7 +1181,7 @@ int main(int argc, char ** argv) {
         return 1;
     }
 
-    static const char windowTitle[] = "OpenSubdiv batching example " OPENSUBDIV_VERSION_STRING;
+    static const char windowTitle[] = "OpenSubdiv batching example " STRINGIFY(OPENSUBDIV_VERSION_STRING);
 
     GLUtils::SetMinimumGLVersion();
 

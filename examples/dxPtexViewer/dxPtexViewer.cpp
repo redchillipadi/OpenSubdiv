@@ -70,6 +70,7 @@ OpenSubdiv::Osd::D3D11MeshInterface *g_mesh;
 #include "../common/d3d11PtexMipmapTexture.h"
 #include "../common/d3d11ShaderCache.h"
 #include "../common/hdr_reader.h"
+#include "../common/stringify.h"
 
 #include <osd/hlslPatchShaderSource.h>
 static const char *g_shaderSource =
@@ -1941,7 +1942,7 @@ WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmd
     RECT rect = { 0, 0, g_width, g_height };
     AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
 
-    static const char windowTitle[] = "OpenSubdiv dxPtexViewer " OPENSUBDIV_VERSION_STRING;
+    static const char windowTitle[] = "OpenSubdiv dxPtexViewer " STRINGIFY(OPENSUBDIV_VERSION_STRING);
 
     HWND hWnd = CreateWindow(szWindowClass,
                         windowTitle,

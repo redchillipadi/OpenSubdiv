@@ -101,6 +101,7 @@ OpenSubdiv::Osd::GLMeshInterface *g_mesh;
 #include "../common/hdr_reader.h"
 #include "../common/glPtexMipmapTexture.h"
 #include "../common/glShaderCache.h"
+#include "../common/stringify.h"
 
 #include <osd/glslPatchShaderSource.h>
 static const char *g_defaultShaderSource =
@@ -1783,7 +1784,7 @@ int main(int argc, char ** argv) {
         return 1;
     }
 
-    static const char windowTitle[] = "OpenSubdiv glPtexViewer" OPENSUBDIV_VERSION_STRING;
+    static const char windowTitle[] = "OpenSubdiv glPtexViewer" STRINGIFY(OPENSUBDIV_VERSION_STRING);
 
     GLUtils::SetMinimumGLVersion();
 
